@@ -1,4 +1,4 @@
-#该项目是多图选择,带有拍照和图片裁剪功能
+###该项目是多图选择,带有拍照和图片裁剪功能
 
     当前编译版本是:
         compileSdkVersion 26
@@ -9,7 +9,7 @@
         classpath 'com.android.tools.build:gradle:3.0.0'
         gradle-4.1-all.zip
 
-#使用方法如下:  
+###使用方法如下:  
          ImageConfig.Builder builder = new ImageConfig.Builder(
                 new GlideLoader())
                 .steepToolBarColor(getResources().getColor(R.color.blue))  // 如果在 4.4 以上，则修改状态栏颜色 （默认黑色）
