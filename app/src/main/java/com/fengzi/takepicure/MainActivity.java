@@ -79,9 +79,9 @@ public class MainActivity extends AppCompatActivity {
         ImageConfig.Builder builder = new ImageConfig.Builder(
                 new GlideLoader())
                 // 如果在 4.4 以上，则修改状态栏颜色 （默认黑色）
-                .steepToolBarColor(getResources().getColor(R.color.blue))
+//                .steepToolBarColor(getResources().getColor(R.color.blue))
                 // 标题的背景颜色 （默认黑色）
-                .titleBgColor(getResources().getColor(R.color.blue))
+//                .titleBgColor(getResources().getColor(R.color.blue))
                 // 提交按钮字体的颜色  （默认白色）
                 .titleSubmitTextColor(getResources().getColor(R.color.white))
                 // 标题颜色 （默认白色）
