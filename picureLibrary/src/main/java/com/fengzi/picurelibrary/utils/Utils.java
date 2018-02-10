@@ -37,7 +37,7 @@ public class    Utils {
         if (android.os.Build.VERSION.SDK_INT > 18) {
             Window window = activity.getWindow();
             window.setFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS, WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
-            LinearLayout whole_layout = (LinearLayout) activity.findViewById(resource);
+            LinearLayout whole_layout = activity.findViewById(resource);
             whole_layout.setBackgroundColor(steepToolBarColor);
             whole_layout.setPadding(0, activity.getResources().getDimensionPixelSize(getStatusBarHeight()), 0, 0);
         }

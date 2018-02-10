@@ -170,6 +170,7 @@ public class ImageSelectorFragment extends Fragment {
 
         category_button.setText(R.string.all_folder);
         category_button.setOnClickListener(new View.OnClickListener() {
+
             @Override
             public void onClick(View v) {
                 if (folderPopupWindow == null) {
@@ -187,8 +188,8 @@ public class ImageSelectorFragment extends Fragment {
             }
         });
 
-
         grid_image.setOnScrollListener(new AbsListView.OnScrollListener() {
+
             @Override
             public void onScrollStateChanged(AbsListView view, int scrollState) {
                 if (scrollState == SCROLL_STATE_IDLE) {
@@ -211,6 +212,7 @@ public class ImageSelectorFragment extends Fragment {
         });
 
         grid_image.getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
+
             @Override
             @TargetApi(Build.VERSION_CODES.JELLY_BEAN)
             public void onGlobalLayout() {
@@ -236,6 +238,7 @@ public class ImageSelectorFragment extends Fragment {
         });
 
         grid_image.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 if (imageAdapter.isShowCamera()) {
@@ -252,8 +255,6 @@ public class ImageSelectorFragment extends Fragment {
                 }
             }
         });
-
-
     }
 
     /**
