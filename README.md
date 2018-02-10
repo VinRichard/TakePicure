@@ -3,6 +3,7 @@
         compileSdkVersion 26
          minSdkVersion 14
         targetSdkVersion 26
+        
      gradle版本:
         classpath 'com.android.tools.build:gradle:3.0.0'
         gradle-4.1-all.zip
