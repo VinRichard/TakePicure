@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="BaseTheme" parent="android:Theme.Light.NoTitleBar" />
+    <style name="picureBaseTheme" parent="android:Theme.Light.NoTitleBar" />
 
-    <style name="ImageSelectorTheme" parent="BaseTheme" />
+    <style name="ImageSelectorTheme" parent="picureBaseTheme" />
 
 </resources>
