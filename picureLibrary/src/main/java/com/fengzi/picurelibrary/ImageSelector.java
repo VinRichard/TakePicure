@@ -14,8 +14,6 @@ import com.fengzi.picurelibrary.utils.Utils;
  */
 public class ImageSelector {
 
-
-    public static final int IMAGE_REQUEST_CODE = 1002;
     public static final int IMAGE_CROP_CODE = 1003;
 
     private static ImageConfig mImageConfig;
@@ -63,7 +61,7 @@ public class ImageSelector {
 
 
         Intent intent = new Intent(fragment.getActivity(), ImageSelectorActivity.class);
-        fragment.startActivityForResult(intent, IMAGE_REQUEST_CODE);
+        fragment.startActivityForResult(intent, mImageConfig.getRequestCode());
     }
 
 }

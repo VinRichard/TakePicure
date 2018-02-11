@@ -35,3 +35,6 @@
         }
 
         ImageSelector.open(MainActivity.this, builder.build());   // 开启图片选择器
+
+2018年2月11日
+  1.修改在fragment中,设定请求ImageConfig 的requestCode的值和onActivityResult的requestCode不一样的bug.

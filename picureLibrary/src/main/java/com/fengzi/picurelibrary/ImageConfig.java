@@ -72,7 +72,7 @@ public class ImageConfig {
         private int aspectY = 1;
         private int outputX = 500;
         private int outputY = 500;
-        private int requestCode = ImageSelector.IMAGE_REQUEST_CODE;
+        private int requestCode ;
 
         private ImageLoader imageLoader;
 
