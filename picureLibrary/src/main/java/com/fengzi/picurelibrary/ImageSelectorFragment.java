@@ -25,6 +25,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.LoaderManager;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.content.CursorLoader;
+import android.support.v4.content.FileProvider;
 import android.support.v4.content.Loader;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.ListPopupWindow;
@@ -363,8 +364,16 @@ public class ImageSelectorFragment extends Fragment {
         Intent cameraIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
         if (cameraIntent.resolveActivity(getActivity().getPackageManager()) != null) {
             tempFile = FileUtils.createTmpFile(getContext(), imageConfig.getFilePath());
-            cameraIntent.putExtra(MediaStore.EXTRA_OUTPUT, Uri.fromFile(tempFile));
-            startActivityForResult(cameraIntent, REQUEST_CAMERA);
+            Uri imageUri = null;
+            if (Build.VERSION.SDK_INT < Build.VERSION_CODES.N) {
+                imageUri = Uri.fromFile(tempFile);
+            } else {
+                cameraIntent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
+                imageUri = FileProvider.getUriForFile(context, context.getApplicationContext().getPackageName() + ".fileprovider", tempFile);
+            }
+            cameraIntent.putExtra(MediaStore.EXTRA_OUTPUT, imageUri);
+             startActivityForResult(cameraIntent, REQUEST_CAMERA);
+
         } else {
             Toast.makeText(context, R.string.msg_no_camera, Toast.LENGTH_SHORT).show();
         }
